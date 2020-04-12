@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Saskia Larissa</title>
+
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-light">
+
+    <div class="container">
+        <div class="py-5 text-align">
+        <div class="col-md-8 order-md-1">
+          <h4 class="mb-3">Billing address</h4>
+          <form id="formKia" class="needs-validation" action="filetujuan.php" method="post">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">First name</label>
+                <input type="text" class="form-control" name="firstName" id="firstName" placeholder="" value="">
+                <div class="invalid-feedback">
+                  Valid first name is
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Last name</label>
+                <input type="text" class="form-control" name="lastName" id="lastName" placeholder="" value="" >
+                <div class="invalid-feedback">
+                  Valid last name is
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="username">Username</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">@</span>
+                </div>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Username">
+                <div class="invalid-feedback" style="width: 100%;">
+                  Your username is
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email">Email <span class="text-muted">(Optional)</span></label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="address">Address</label>
+              <input type="text" class="form-control" name="address" id="address" placeholder="1234 Main St">
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+              <input type="text" class="form-control" name="address2" id="address2" placeholder="Apartment or suite">
+            </div>
+
+            <div class="row">
+              <div class="col-md-5 mb-3">
+                <label for="country">Country</label>
+                <select class="custom-select d-block w-100" name="country" id="country">
+                  <option value="">Choose...</option>
+                  <option>Indonesia</option>
+                  <option>Jepang</option>
+                  <option>Korea</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="state">State</label>
+                <select class="custom-select d-block w-100" name="state" id="state">
+                  <option value="">Choose...</option>
+                  <option>Sulawesi Selatan</option>
+                  <option>Kalimantan Timur</option>
+                  <option>Jawa Timur</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="zip">Zip</label>
+                <input type="text" class="form-control" name="zip" id="zip" placeholder="">
+                <div class="invalid-feedback">
+                  Zip code required.
+                </div>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" name="same-address" id="same-address">
+              <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" name="save-info" id="save-info">
+              <label class="custom-control-label" for="save-info">Save this information for next time</label>
+            </div>
+            <hr class="mb-4">
+
+            <h4 class="mb-3">Payment</h4>
+
+            <div class="d-block my-3">
+              <div class="custom-control custom-radio">
+                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input">
+                <label class="custom-control-label" for="credit">Credit card</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input">
+                <label class="custom-control-label" for="debit">Debit card</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input">
+                <label class="custom-control-label" for="paypal">Paypal</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="cc-name">Name on card</label>
+                <input type="text" class="form-control" name="nameCard" id="nameCard" placeholder="">
+                <small class="text-muted">Full name as displayed on card</small>
+                <div class="invalid-feedback">
+                  Name on card is
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cc-number">Credit card number</label>
+                <input type="text" class="form-control" name="creditCardNumber" id="creditCardNumber" placeholder="">
+                <div class="invalid-feedback">
+                  Credit card number is
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration">Expiration</label>
+                <input type="text" class="form-control" name="expiration" id="expiration" placeholder="">
+                <div class="invalid-feedback">
+                  Expiration date
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration">CVV</label>
+                <input type="text" class="form-control" name="cvv" id="cvv" placeholder="">
+                <div class="invalid-feedback">
+                  Security code
+                </div>
+              </div>
+            </div>
+            <hr class="mb-4">
+             <div class="row">
+                  <div class="col-md-4"><button type="submit" class="btn btn-primary btn-md btn-block" id="insert" name="action" value="insert">INSERT DATA</button></div>
+                  <div class="col-md-4"><button type="submit" class="btn btn-success btn-md btn-block" id="update" name="action" value="update">UPDATE DATA</button></div>
+              </div><br>
+                <div class="row">
+                  <div class="col-md-4"><button type="submit" class="btn btn-info btn-md btn-block" id="read" name="action" value="read">SHOW DATA</button></div>
+                  <div class="col-md-4"><button type="submit" class="btn btn-danger btn-md btn-block" id="delete" name="action" value="delete">DELETE DATA</button></div>
+                </div>
+          </form>
+        </div>
+      <div id="result"></div>
+      </div>
+      <hr class="mb-4">
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>  
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+  <script>
+
+//Semua element jquery diawali dengan $
+//Strength of javascript
+//1. javascript object notation (json): json bisa berbentuk array of record atau record of array
+//2. Asynchronous JavaScript and XML (AJaX): data dikirim dalam format object, diterima dalam format string atau json
+  
+  $("#formKia").submit(tangani);//komentar bagian ini agar syncronous yang berjalan
+  function tangani(e){
+    //kalau fungsi serialize outputnya string dengan format x-www-form-urlencoded, contoh lihat di div result di atas
+    var strformencoded = $("#formKia").serialize();
+    $("#result").text(strformencoded);
+    
+    //kalau pakai fungsi serializeArray outputnya array of record - contoh lihat di console
+    var arrayform = $("#formKia").serializeArray();
+    console.log(arrayform);
+    
+    $.post("filetujuan.php",{dataku : strformencoded}, function(output){ 
+      //tulis kodemu di sini
+      alert(output);
+      
+    });
+    
+    return false;
+  }
+  </script>
+  </body>
+</html>
